@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import './PlaceOrder.css';
 import { StoreContext } from '../../context/StoreContext'; 
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // <-- FIXED
+import { useNavigate } from 'react-router-dom';
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount, token, food_list, cartItems, url } = useContext(StoreContext);
-  const navigate = useNavigate(); // <-- FIXED
+  const { getTotalCartAmount, token, food_list, cartItems, setCartItems, url } = useContext(StoreContext);
+  const navigate = useNavigate();
 
   const [data, setData] = useState({
     first_name: "",
@@ -41,8 +41,8 @@ const PlaceOrder = () => {
     try {
       const response = await axios.post(`${url}/api/order/place`, orderData, { headers: { token } });
       if (response.data.success) {
-        const { session_url } = response.data;
-        window.location.replace(session_url);
+        setCartItems({}); // clear cart
+        navigate("/my-orders"); // redirect to MyOrders page
       } else {
         alert("Error placing order");
       }
