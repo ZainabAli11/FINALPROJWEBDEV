@@ -100,7 +100,10 @@ General Instructions
 
 * Ensure the backend server is running.
 * Make sure `.env` variables are correctly set for both backend and frontend.
-* All images are stored in `/uploads` folder in the backend; ensure they are accessible for display.
+* All images are stored in IN /uploads` folder in the backend; ensure they are accessible for display.
 * Refresh the page after updating order status to see changes reflected on the admin panel.
 
+
+SCREENSHOTS
+Screenshots in folder 
 ---
