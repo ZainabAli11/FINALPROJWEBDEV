@@ -1,0 +1,90 @@
+.order {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.order h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.order-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.order-customer-info {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.order-customer-info p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.order-item-food-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fafafa;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.order-item-food-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.order-item-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.order-item-quantity,
+.order-item-price {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .order-item-food-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item-food-card img {
+    width: 100%;
+    height: auto;
+  }
+}

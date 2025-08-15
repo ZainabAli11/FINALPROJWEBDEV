@@ -1,0 +1,47 @@
+.list-table-format{
+    display:grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding:12px 15px;
+    border: 1px solid #cacaca;
+    font-size:13px;
+    }
+.list-table-format.title{
+        background-color:#f9f9f9;
+    }
+.list-table-format img{
+    width:150px;
+}
+@media (max-width:600px){
+    .list-table-format{
+        grid-template-columns: 1fr 3fr 1fr;
+        gap:15px;
+    }
+    .list-table-format.title{
+        display:none;
+    }
+}
+.delete-btn {
+  background: #f28b82;
+  color: #7f1d1d;
+  border: none;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  padding: 0;
+  border-radius: 3px;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(242, 139, 130, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #e66b66;
+  color: #4b0f0f;
+  box-shadow: 0 4px 10px rgba(230, 107, 102, 0.6);
+}

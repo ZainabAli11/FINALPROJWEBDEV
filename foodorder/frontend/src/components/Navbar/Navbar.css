@@ -1,0 +1,150 @@
+.navbar {
+    width: 100vw;
+    margin-left: calc(-10vw);
+    background-color: #323232;
+    color: #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8vw;
+    box-sizing: border-box;
+}
+
+.navbar .logo {
+    width: 150px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease, border-radius 0.4s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.navbar .logo:hover {
+    transform: scale(1.08) rotate(-1deg);
+    border-radius: 20px;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4)) brightness(1.05);
+}
+
+.navbar .logo:active {
+    transform: scale(0.97);
+    border-radius: 16px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #d9d9d9;
+    font-size: 18px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #d9d9d9;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+    color: #323232;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-profile{
+    position:relative;
+}
+.navbar-profile-dropdown{
+     position:absolute;
+     display:none;
+     right:0;
+     z-index:1;
+}
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+.navbar-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color:black;
+}
+
+.navbar-profile-dropdown img{
+    width:20px;
+}
+
+
+.navbar-profile-dropdown li:hover{
+    color:tomato;
+}
+@media (max-width: 900px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu {
+        font-size: 16px;
+        gap: 15px;
+    }
+    .navbar-right {
+        gap: 20px;
+    }
+    .navbar-right img{
+        width:20px;
+    }
+    .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+  
+    .navbar-menu {
+        display: none;
+    }
+   
+}
